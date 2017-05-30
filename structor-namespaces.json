@@ -1,0 +1,15 @@
+{
+  "namespaces": {},
+  "dependencies": {
+    "packages": [
+      {
+        "name": "react-native-web",
+        "version": "0.0.95"
+      },
+      {
+        "name": "expect",
+        "version": "1.20.2"
+      }
+    ]
+  }
+}
