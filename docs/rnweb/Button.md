@@ -1,7 +1,106 @@
-##### This is a rnweb/Button React component documentation template
+---
+id: button
+title: Button
+---
 
-Documentation will be displayed in the component options dialog which you can open in Structor workspace.
+A basic button component that should render nicely on any platform. Supports a minimal level of customization.
 
-So, if there is some notes worth to remember, like descriptions of available props in component, place them here.
+If this button doesn't look right for your app, you can build your own button using [TouchableOpacity](touchableopacity.md) or [TouchableNativeFeedback](touchablenativefeedback.md). For inspiration, look at the [source code for this button component](https://github.com/facebook/react-native/blob/master/Libraries/Components/Button.js). Or, take a look at the [wide variety of button components built by the community](https://js.coach/react-native?search=button).
 
-**Please find file to edit in: `.structor/docs/components`**
+Example usage:
+
+```javascript
+import { Button } from 'react-native';
+...
+
+<Button
+  onPress={onPressLearnMore}
+  title="Learn More"
+  color="#841584"
+  accessibilityLabel="Learn more about this purple button"
+/>
+```
+
+### Props
+
+* [`onPress`](button.md#onpress)
+* [`title`](button.md#title)
+* [`accessibilityLabel`](button.md#accessibilitylabel)
+* [`color`](button.md#color)
+* [`disabled`](button.md#disabled)
+* [`testID`](button.md#testid)
+* [`hasTVPreferredFocus`](button.md#hastvpreferredfocus)
+
+---
+
+# Reference
+
+## Props
+
+### `onPress`
+
+Handler to be called when the user taps the button
+
+| Type     | Required |
+| -------- | -------- |
+| function | Yes      |
+
+---
+
+### `title`
+
+Text to display inside the button
+
+| Type   | Required |
+| ------ | -------- |
+| string | Yes      |
+
+---
+
+### `accessibilityLabel`
+
+Text to display for blindness accessibility features
+
+| Type   | Required |
+| ------ | -------- |
+| string | No       |
+
+---
+
+### `color`
+
+Color of the text (iOS), or background color of the button (Android)
+
+| Type               | Required |
+| ------------------ | -------- |
+| [color](colors.md) | No       |
+
+---
+
+### `disabled`
+
+If true, disable all interactions for this component.
+
+| Type | Required |
+| ---- | -------- |
+| bool | No       |
+
+---
+
+### `testID`
+
+Used to locate this view in end-to-end tests.
+
+| Type   | Required |
+| ------ | -------- |
+| string | No       |
+
+---
+
+### `hasTVPreferredFocus`
+
+_(Apple TV only)_ TV preferred focus (see documentation for the View component).
+
+| Type | Required | Platform |
+| ---- | -------- | -------- |
+| bool | No       | iOS      |
